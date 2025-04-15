@@ -40,8 +40,8 @@ Initializes LOADING_BAR and ANIMATION_FRAME
 to their starting values 0 and 0 respectively.
 ------------------------------------------------*/
 void seg_init(void) {
-		LOADING_BAR = 0;
-		ANIMATION_FRAME = 0;
+	LOADING_BAR = 0;
+	ANIMATION_FRAME = 0;
 }
 
 /*------------------------------------------------
