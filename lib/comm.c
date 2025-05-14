@@ -49,7 +49,7 @@ void comm_send(unsigned char addr, unsigned char message) {
 	trans_send(); /* Enable transmitting for this microcontroller */
 	
 	TB8 = 1; /* Set ninth bit to 1 */
-					 /* (all microcontrollers will recieve this message) */
+		 /* (all microcontrollers will recieve this message) */
 	SBUF = addr; /* Prepare to send the address */
 	
 	while(TI != 1) {;} /* Wait until the transmission concludes */
@@ -59,7 +59,7 @@ void comm_send(unsigned char addr, unsigned char message) {
 	trans_send();
 		
 	TB8 = 0; /* Set ninth bit to 0 */
-					 /* (only the microcontroller with SM2 == 0 will recieve this message) */
+		 /* (only the microcontroller with SM2 == 0 will recieve this message) */
 	SBUF = message; /* Prepare to send the message */
 		
 	while(TI == 0) {;} /* Wait until the transmission concludes */
